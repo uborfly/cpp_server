@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/boost_test/src/main.cpp
+cgicc/Cgicc.h
+/workspaces/boost_test/src/cgicc/Cgicc.h
+iostream
+-
+

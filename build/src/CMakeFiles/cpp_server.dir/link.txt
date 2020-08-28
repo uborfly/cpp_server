@@ -1,0 +1,1 @@
+g++    -rdynamic CMakeFiles/cpp_server.dir/main.cpp.o  -o ../../bin/cpp_server   -L/workspaces/boost_test/lib  -Wl,-rpath,/workspaces/boost_test/lib -lcgicc 
