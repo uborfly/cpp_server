@@ -44,73 +44,55 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/boost_test
+CMAKE_SOURCE_DIR = /root/cpp_server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/boost_test/build
+CMAKE_BINARY_DIR = /root/cpp_server/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: src/all
+all: CMakeFiles/test_app.dir/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: src/preinstall
+preinstall:
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: src/clean
+clean: CMakeFiles/test_app.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory src
-
-# Recursive "all" directory target.
-src/all: src/CMakeFiles/cpp_server.dir/all
-
-.PHONY : src/all
-
-# Recursive "preinstall" directory target.
-src/preinstall:
-
-.PHONY : src/preinstall
-
-# Recursive "clean" directory target.
-src/clean: src/CMakeFiles/cpp_server.dir/clean
-
-.PHONY : src/clean
-
-#=============================================================================
-# Target rules for target src/CMakeFiles/cpp_server.dir
+# Target rules for target CMakeFiles/test_app.dir
 
 # All Build rule for target.
-src/CMakeFiles/cpp_server.dir/all:
-	$(MAKE) -f src/CMakeFiles/cpp_server.dir/build.make src/CMakeFiles/cpp_server.dir/depend
-	$(MAKE) -f src/CMakeFiles/cpp_server.dir/build.make src/CMakeFiles/cpp_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/boost_test/build/CMakeFiles --progress-num=1,2 "Built target cpp_server"
-.PHONY : src/CMakeFiles/cpp_server.dir/all
+CMakeFiles/test_app.dir/all:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/depend
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/cpp_server/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target test_app"
+.PHONY : CMakeFiles/test_app.dir/all
 
 # Build rule for subdir invocation for target.
-src/CMakeFiles/cpp_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/boost_test/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/cpp_server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/boost_test/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/cpp_server.dir/rule
+CMakeFiles/test_app.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cpp_server/build/CMakeFiles 9
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_app.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cpp_server/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_app.dir/rule
 
 # Convenience name for target.
-cpp_server: src/CMakeFiles/cpp_server.dir/rule
+test_app: CMakeFiles/test_app.dir/rule
 
-.PHONY : cpp_server
+.PHONY : test_app
 
 # clean rule for target.
-src/CMakeFiles/cpp_server.dir/clean:
-	$(MAKE) -f src/CMakeFiles/cpp_server.dir/build.make src/CMakeFiles/cpp_server.dir/clean
-.PHONY : src/CMakeFiles/cpp_server.dir/clean
+CMakeFiles/test_app.dir/clean:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/clean
+.PHONY : CMakeFiles/test_app.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

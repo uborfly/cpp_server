@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/boost_test
+CMAKE_SOURCE_DIR = /root/cpp_server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/boost_test/build
+CMAKE_BINARY_DIR = /root/cpp_server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/boost_test/build/CMakeFiles /workspaces/boost_test/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cpp_server/build/CMakeFiles /root/cpp_server/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/boost_test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cpp_server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,233 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cpp_server
+# Target rules for targets named test_app
 
 # Build rule for target.
-cpp_server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cpp_server
-.PHONY : cpp_server
+test_app: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_app
+.PHONY : test_app
 
 # fast build rule for target.
-cpp_server/fast:
-	$(MAKE) -f src/CMakeFiles/cpp_server.dir/build.make src/CMakeFiles/cpp_server.dir/build
-.PHONY : cpp_server/fast
+test_app/fast:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/build
+.PHONY : test_app/fast
+
+src/http/server/connection.o: src/http/server/connection.cpp.o
+
+.PHONY : src/http/server/connection.o
+
+# target to build an object file
+src/http/server/connection.cpp.o:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/connection.cpp.o
+.PHONY : src/http/server/connection.cpp.o
+
+src/http/server/connection.i: src/http/server/connection.cpp.i
+
+.PHONY : src/http/server/connection.i
+
+# target to preprocess a source file
+src/http/server/connection.cpp.i:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/connection.cpp.i
+.PHONY : src/http/server/connection.cpp.i
+
+src/http/server/connection.s: src/http/server/connection.cpp.s
+
+.PHONY : src/http/server/connection.s
+
+# target to generate assembly for a file
+src/http/server/connection.cpp.s:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/connection.cpp.s
+.PHONY : src/http/server/connection.cpp.s
+
+src/http/server/io_context_pool.o: src/http/server/io_context_pool.cpp.o
+
+.PHONY : src/http/server/io_context_pool.o
+
+# target to build an object file
+src/http/server/io_context_pool.cpp.o:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/io_context_pool.cpp.o
+.PHONY : src/http/server/io_context_pool.cpp.o
+
+src/http/server/io_context_pool.i: src/http/server/io_context_pool.cpp.i
+
+.PHONY : src/http/server/io_context_pool.i
+
+# target to preprocess a source file
+src/http/server/io_context_pool.cpp.i:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/io_context_pool.cpp.i
+.PHONY : src/http/server/io_context_pool.cpp.i
+
+src/http/server/io_context_pool.s: src/http/server/io_context_pool.cpp.s
+
+.PHONY : src/http/server/io_context_pool.s
+
+# target to generate assembly for a file
+src/http/server/io_context_pool.cpp.s:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/io_context_pool.cpp.s
+.PHONY : src/http/server/io_context_pool.cpp.s
+
+src/http/server/mime_types.o: src/http/server/mime_types.cpp.o
+
+.PHONY : src/http/server/mime_types.o
+
+# target to build an object file
+src/http/server/mime_types.cpp.o:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/mime_types.cpp.o
+.PHONY : src/http/server/mime_types.cpp.o
+
+src/http/server/mime_types.i: src/http/server/mime_types.cpp.i
+
+.PHONY : src/http/server/mime_types.i
+
+# target to preprocess a source file
+src/http/server/mime_types.cpp.i:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/mime_types.cpp.i
+.PHONY : src/http/server/mime_types.cpp.i
+
+src/http/server/mime_types.s: src/http/server/mime_types.cpp.s
+
+.PHONY : src/http/server/mime_types.s
+
+# target to generate assembly for a file
+src/http/server/mime_types.cpp.s:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/mime_types.cpp.s
+.PHONY : src/http/server/mime_types.cpp.s
+
+src/http/server/reply.o: src/http/server/reply.cpp.o
+
+.PHONY : src/http/server/reply.o
+
+# target to build an object file
+src/http/server/reply.cpp.o:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/reply.cpp.o
+.PHONY : src/http/server/reply.cpp.o
+
+src/http/server/reply.i: src/http/server/reply.cpp.i
+
+.PHONY : src/http/server/reply.i
+
+# target to preprocess a source file
+src/http/server/reply.cpp.i:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/reply.cpp.i
+.PHONY : src/http/server/reply.cpp.i
+
+src/http/server/reply.s: src/http/server/reply.cpp.s
+
+.PHONY : src/http/server/reply.s
+
+# target to generate assembly for a file
+src/http/server/reply.cpp.s:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/reply.cpp.s
+.PHONY : src/http/server/reply.cpp.s
+
+src/http/server/request_handler.o: src/http/server/request_handler.cpp.o
+
+.PHONY : src/http/server/request_handler.o
+
+# target to build an object file
+src/http/server/request_handler.cpp.o:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/request_handler.cpp.o
+.PHONY : src/http/server/request_handler.cpp.o
+
+src/http/server/request_handler.i: src/http/server/request_handler.cpp.i
+
+.PHONY : src/http/server/request_handler.i
+
+# target to preprocess a source file
+src/http/server/request_handler.cpp.i:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/request_handler.cpp.i
+.PHONY : src/http/server/request_handler.cpp.i
+
+src/http/server/request_handler.s: src/http/server/request_handler.cpp.s
+
+.PHONY : src/http/server/request_handler.s
+
+# target to generate assembly for a file
+src/http/server/request_handler.cpp.s:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/request_handler.cpp.s
+.PHONY : src/http/server/request_handler.cpp.s
+
+src/http/server/request_parser.o: src/http/server/request_parser.cpp.o
+
+.PHONY : src/http/server/request_parser.o
+
+# target to build an object file
+src/http/server/request_parser.cpp.o:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/request_parser.cpp.o
+.PHONY : src/http/server/request_parser.cpp.o
+
+src/http/server/request_parser.i: src/http/server/request_parser.cpp.i
+
+.PHONY : src/http/server/request_parser.i
+
+# target to preprocess a source file
+src/http/server/request_parser.cpp.i:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/request_parser.cpp.i
+.PHONY : src/http/server/request_parser.cpp.i
+
+src/http/server/request_parser.s: src/http/server/request_parser.cpp.s
+
+.PHONY : src/http/server/request_parser.s
+
+# target to generate assembly for a file
+src/http/server/request_parser.cpp.s:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/request_parser.cpp.s
+.PHONY : src/http/server/request_parser.cpp.s
+
+src/http/server/server.o: src/http/server/server.cpp.o
+
+.PHONY : src/http/server/server.o
+
+# target to build an object file
+src/http/server/server.cpp.o:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/server.cpp.o
+.PHONY : src/http/server/server.cpp.o
+
+src/http/server/server.i: src/http/server/server.cpp.i
+
+.PHONY : src/http/server/server.i
+
+# target to preprocess a source file
+src/http/server/server.cpp.i:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/server.cpp.i
+.PHONY : src/http/server/server.cpp.i
+
+src/http/server/server.s: src/http/server/server.cpp.s
+
+.PHONY : src/http/server/server.s
+
+# target to generate assembly for a file
+src/http/server/server.cpp.s:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/server/server.cpp.s
+.PHONY : src/http/server/server.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -131,7 +347,31 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... cpp_server"
+	@echo "... test_app"
+	@echo "... src/http/server/connection.o"
+	@echo "... src/http/server/connection.i"
+	@echo "... src/http/server/connection.s"
+	@echo "... src/http/server/io_context_pool.o"
+	@echo "... src/http/server/io_context_pool.i"
+	@echo "... src/http/server/io_context_pool.s"
+	@echo "... src/http/server/mime_types.o"
+	@echo "... src/http/server/mime_types.i"
+	@echo "... src/http/server/mime_types.s"
+	@echo "... src/http/server/reply.o"
+	@echo "... src/http/server/reply.i"
+	@echo "... src/http/server/reply.s"
+	@echo "... src/http/server/request_handler.o"
+	@echo "... src/http/server/request_handler.i"
+	@echo "... src/http/server/request_handler.s"
+	@echo "... src/http/server/request_parser.o"
+	@echo "... src/http/server/request_parser.i"
+	@echo "... src/http/server/request_parser.s"
+	@echo "... src/http/server/server.o"
+	@echo "... src/http/server/server.i"
+	@echo "... src/http/server/server.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
