@@ -380,7 +380,7 @@ namespace http
             }
             std::cout << "req.method:" + req.method << std::endl;
             std::cout << "content_type:" + content_type << std::endl;
-            // std::cout << "post:" + data_ << std::endl;
+            // // std::cout << "post:" + data_ << std::endl;
 
             //开始解析post参数
             if (boost::algorithm::iequals(req.method, "POST") && boost::algorithm::iequals(content_type, "multipart/form-data"))
@@ -422,7 +422,6 @@ namespace http
                     index++;
                     it = boost::algorithm::ifind_nth(data_, find_str, index);
                 }
-                std::cout << "post:" + data_ << std::endl;
             }
             //解析post参数结束
         }

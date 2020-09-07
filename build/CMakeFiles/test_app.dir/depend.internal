@@ -7,6 +7,7 @@ CMakeFiles/test_app.dir/src/http/data_handle.cpp.o
  ../inc/http/server/reply.hpp
  /root/cpp_server/src/http/data_handle.cpp
 CMakeFiles/test_app.dir/src/http/server/connection.cpp.o
+ ../inc/http/data_handle.hpp
  ../inc/http/server/connection.hpp
  ../inc/http/server/header.hpp
  ../inc/http/server/reply.hpp

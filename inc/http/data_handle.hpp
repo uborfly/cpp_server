@@ -5,7 +5,8 @@
 
 namespace http
 {
-    void data_process(std::string req, server::reply &rep);
+    void data_ret(std::string req, server::reply &rep);
+    void data_process(std::string data, server::reply &rep);
 } // namespace http
 
 #endif

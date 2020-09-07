@@ -13,6 +13,8 @@
 #include <boost/bind/bind.hpp>
 #include "request_handler.hpp"
 #include <boost/algorithm/string.hpp>
+#include <iostream>
+#include "data_handle.hpp"
 
 namespace http
 {
@@ -96,9 +98,9 @@ namespace http
 
                     //data_ = utf8_to_ascii(data_);//
 
-                    request_parser_.parse_param(request_, data_); //新加的方法
-
-                    request_handler_.handle_request(request_, reply_);
+                    request_parser_.parse_param(request_, data_);      //新加的方法
+                    data_process(data_, reply_);                       //解析post表单
+                    request_handler_.handle_request(request_, reply_); //数据返回
                     boost::asio::async_write(socket_, reply_.to_buffers(),
                                              boost::bind(&connection::handle_write, shared_from_this(),
                                                          boost::asio::placeholders::error));

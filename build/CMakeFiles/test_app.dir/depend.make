@@ -6,6 +6,7 @@ CMakeFiles/test_app.dir/src/http/data_handle.cpp.o: ../inc/http/server/header.hp
 CMakeFiles/test_app.dir/src/http/data_handle.cpp.o: ../inc/http/server/reply.hpp
 CMakeFiles/test_app.dir/src/http/data_handle.cpp.o: ../src/http/data_handle.cpp
 
+CMakeFiles/test_app.dir/src/http/server/connection.cpp.o: ../inc/http/data_handle.hpp
 CMakeFiles/test_app.dir/src/http/server/connection.cpp.o: ../inc/http/server/connection.hpp
 CMakeFiles/test_app.dir/src/http/server/connection.cpp.o: ../inc/http/server/header.hpp
 CMakeFiles/test_app.dir/src/http/server/connection.cpp.o: ../inc/http/server/reply.hpp
