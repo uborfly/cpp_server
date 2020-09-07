@@ -10,10 +10,12 @@
 
 #include "request_parser.hpp"
 #include "request.hpp"
+#include <boost/algorithm/string.hpp>
+#include <iostream>
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
 
         request_parser::request_parser()
@@ -328,5 +330,102 @@ namespace http
             return c >= '0' && c <= '9';
         }
 
-    } // namespace server2
+        void request_parser::parse_param(request &req, std::string &data_)
+        {
+            //开始解析get参数
+            int index = req.uri.find_first_of("?");
+            if (index >= 0)
+            {
+                req.short_uri = req.uri.substr(0, index);
+
+                std::string param_str = req.uri.substr(index + 1, req.uri.size());
+
+                std::vector<std::string> split_result;
+                boost::split(split_result, param_str, boost::is_any_of("&"));
+
+                for (int i = 0; i < split_result.size(); i++)
+                {
+                    std::vector<std::string> split_result_temp;
+                    boost::split(split_result_temp, split_result.at(i), boost::is_any_of("="));
+                    if (split_result_temp.size() >= 2)
+                    {
+                        req.params.push_back(header());
+                        req.params.back().name = split_result_temp.at(0);
+                        req.params.back().value = split_result_temp.at(1);
+                    }
+                }
+            }
+            else
+            {
+                req.short_uri = req.uri;
+            }
+            //解析get参数结束
+
+            std::string content_type;
+            for (int i = 0; i < req.headers.size(); i++)
+            {
+                // std::cout << "req.headers[" << i << "].name:" + req.headers[i].name << std::endl;
+                if (boost::algorithm::iequals(req.headers[i].name, "content-type"))
+                {
+                    // std::cout << "req.headers.value:" + req.headers[i].value << std::endl;
+                    content_type = req.headers[i].value;
+                    break;
+                }
+            }
+
+            int index_content_type = content_type.find_first_of(';');
+            if (index_content_type > 0)
+            {
+                content_type = content_type.substr(0, index_content_type);
+            }
+            std::cout << "req.method:" + req.method << std::endl;
+            std::cout << "content_type:" + content_type << std::endl;
+            // std::cout << "post:" + data_ << std::endl;
+
+            //开始解析post参数
+            if (boost::algorithm::iequals(req.method, "POST") && boost::algorithm::iequals(content_type, "multipart/form-data"))
+            {
+                const char *find_str = "\nContent-Disposition: form-data; name=\"";
+                int index = 0;
+                auto it = boost::algorithm::ifind_nth(data_, find_str, index);
+                while (!it.empty())
+                {
+                    req.params.push_back(header());
+                    auto it_temp = it.end();
+                    while (it_temp != data_.end())
+                    {
+                        if (*it_temp == '\"')
+                        {
+                            break;
+                        }
+
+                        req.params.back().name.push_back(*it_temp);
+                        it_temp++;
+                    }
+
+                    it_temp++;
+                    while (*it_temp == '\r' || *it_temp == '\n')
+                    {
+                        it_temp++;
+                    }
+
+                    while (it_temp != data_.end())
+                    {
+                        if (*it_temp == '\r')
+                        {
+                            break;
+                        }
+
+                        req.params.back().value.push_back(*it_temp);
+                        it_temp++;
+                    }
+                    index++;
+                    it = boost::algorithm::ifind_nth(data_, find_str, index);
+                }
+                std::cout << "post:" + data_ << std::endl;
+            }
+            //解析post参数结束
+        }
+
+    } // namespace server
 } // namespace http

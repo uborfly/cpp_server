@@ -14,7 +14,7 @@
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
 
         namespace status_strings
@@ -257,5 +257,5 @@ namespace http
             return rep;
         }
 
-    } // namespace server2
+    } // namespace server
 } // namespace http

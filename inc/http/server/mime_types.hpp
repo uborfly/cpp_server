@@ -15,7 +15,7 @@
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
         namespace mime_types
         {
@@ -24,7 +24,7 @@ namespace http
             std::string extension_to_type(const std::string &extension);
 
         } // namespace mime_types
-    }     // namespace server2
+    }     // namespace server
 } // namespace http
 
 #endif // HTTP_SERVER2_MIME_TYPES_HPP

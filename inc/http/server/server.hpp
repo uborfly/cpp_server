@@ -22,7 +22,7 @@
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
 
         /// The top-level class of the HTTP server.
@@ -64,7 +64,7 @@ namespace http
             request_handler request_handler_;
         };
 
-    } // namespace server2
+    } // namespace server
 } // namespace http
 
 #endif // HTTP_SERVER2_SERVER_HPP

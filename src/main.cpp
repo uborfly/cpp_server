@@ -19,25 +19,16 @@ int main(int argc, char *argv[])
 {
     try
     {
-        // // Check command line arguments.
-        // if (argc != 5)
-        // {
-        //     std::cerr << "Usage: http_server <address> <port> <threads> <doc_root>\n";
-        //     std::cerr << "  For IPv4, try:\n";
-        //     std::cerr << "    receiver 0.0.0.0 80 1 .\n";
-        //     std::cerr << "  For IPv6, try:\n";
-        //     std::cerr << "    receiver 0::0 80 1 .\n";
-        //     return 1;
-        // }
         std::string ip_address = "0.0.0.0";
         std::string port = "8081";
         std::string doc_root = "/root/cpp_server/docs";
-        std::size_t num_threads = 300;
-        // Initialise the server.
-        // std::size_t num_threads = boost::lexical_cast<std::size_t>(argv[3]);
-        http::server2::server s(ip_address, port, doc_root, num_threads);
+        std::size_t num_threads = 3000;
+        http::server::server s(ip_address, port, doc_root, num_threads);
 
         // Run the server until stopped.
+        std::cout << "ip_address:" + ip_address << std::endl
+                  << "port:" + port << std::endl
+                  << "num_threads:" << num_threads << std::endl;
         s.run();
     }
     catch (std::exception &e)

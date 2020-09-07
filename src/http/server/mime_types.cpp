@@ -12,7 +12,7 @@
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
         namespace mime_types
         {
@@ -45,5 +45,5 @@ namespace http
             }
 
         } // namespace mime_types
-    }     // namespace server2
+    }     // namespace server
 } // namespace http

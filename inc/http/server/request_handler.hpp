@@ -16,7 +16,7 @@
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
 
         struct reply;
@@ -42,7 +42,7 @@ namespace http
             static bool url_decode(const std::string &in, std::string &out);
         };
 
-    } // namespace server2
+    } // namespace server
 } // namespace http
 
 #endif // HTTP_SERVER2_REQUEST_HANDLER_HPP

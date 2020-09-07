@@ -19,7 +19,7 @@
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
 
         /// A pool of io_context objects.
@@ -52,7 +52,7 @@ namespace http
             std::size_t next_io_context_;
         };
 
-    } // namespace server2
+    } // namespace server
 } // namespace http
 
 #endif // HTTP_SERVER2_IO_SERVICE_POOL_HPP

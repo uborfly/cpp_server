@@ -16,7 +16,7 @@
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
 
         io_context_pool::io_context_pool(std::size_t pool_size)
@@ -69,5 +69,5 @@ namespace http
             return io_context;
         }
 
-    } // namespace server2
+    } // namespace server
 } // namespace http

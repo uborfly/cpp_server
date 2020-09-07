@@ -12,10 +12,11 @@
 #include <vector>
 #include <boost/bind/bind.hpp>
 #include "request_handler.hpp"
+#include <boost/algorithm/string.hpp>
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
 
         connection::connection(boost::asio::io_context &io_context,
@@ -43,12 +44,60 @@ namespace http
         {
             if (!e)
             {
-                boost::tribool result;
-                boost::tie(result, boost::tuples::ignore) = request_parser_.parse(
-                    request_, buffer_.data(), buffer_.data() + bytes_transferred);
+                std::string this_data(buffer_.data(), bytes_transferred);
+                data_.append(this_data);
 
-                if (result)
+                int header_end = data_.find("\r\n\r\n"); //http协议的头部结束标识
+                if (header_end < 0)
                 {
+                    socket_.async_read_some(boost::asio::buffer(buffer_),
+                                            boost::bind(&connection::handle_read, shared_from_this(),
+                                                        boost::asio::placeholders::error,
+                                                        boost::asio::placeholders::bytes_transferred));
+                    return;
+                }
+
+                boost::tribool result;
+                if (!is_header_parsed)
+                {
+                    boost::tie(result, boost::tuples::ignore) = request_parser_.parse(
+                        request_, buffer_.data(), buffer_.data() + bytes_transferred);
+                }
+
+                if (is_header_parsed || result)
+                {
+                    is_header_parsed = true;
+
+                    std::string length_str;
+                    for (int i = 0; i < request_.headers.size(); i++)
+                    {
+                        if (boost::algorithm::iequals(request_.headers[i].name, "content-length"))
+                        {
+                            length_str = request_.headers[i].value;
+                            break;
+                        }
+                    }
+
+                    int content_length = 0;
+                    if (!length_str.empty())
+                    {
+                        content_length = atoi(length_str.c_str());
+                    }
+
+                    if (data_.size() < (content_length + header_end + 4))
+                    { //数据不全，继续接受tcp数据
+                        socket_.async_read_some(boost::asio::buffer(buffer_),
+                                                boost::bind(&connection::handle_read, shared_from_this(),
+                                                            boost::asio::placeholders::error,
+                                                            boost::asio::placeholders::bytes_transferred));
+
+                        return;
+                    }
+
+                    //data_ = utf8_to_ascii(data_);//
+
+                    request_parser_.parse_param(request_, data_); //新加的方法
+
                     request_handler_.handle_request(request_, reply_);
                     boost::asio::async_write(socket_, reply_.to_buffers(),
                                              boost::bind(&connection::handle_write, shared_from_this(),
@@ -91,5 +140,5 @@ namespace http
             // destructor closes the socket.
         }
 
-    } // namespace server2
+    } // namespace server
 } // namespace http

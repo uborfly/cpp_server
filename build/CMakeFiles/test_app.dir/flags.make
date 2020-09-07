@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/root/cpp_server/inc -I/root/cpp_server/inc/http/server 
+CXX_INCLUDES = -I/root/cpp_server/inc -I/root/cpp_server/inc/http -I/root/cpp_server/inc/http/server 
 

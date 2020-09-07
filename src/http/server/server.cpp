@@ -13,7 +13,7 @@
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
 
         server::server(const std::string &address, const std::string &port,
@@ -75,5 +75,5 @@ namespace http
             io_context_pool_.stop();
         }
 
-    } // namespace server2
+    } // namespace server
 } // namespace http

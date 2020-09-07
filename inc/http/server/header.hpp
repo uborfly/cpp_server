@@ -15,7 +15,7 @@
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
 
         struct header
@@ -24,7 +24,7 @@ namespace http
             std::string value;
         };
 
-    } // namespace server2
+    } // namespace server
 } // namespace http
 
 #endif // HTTP_SERVER2_HEADER_HPP

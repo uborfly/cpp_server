@@ -53,13 +53,15 @@ find_package(Boost COMPONENTS filesystem regex REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
 
 include_directories(inc)
+include_directories(inc/http)
 include_directories(inc/http/server)
 
 set(${PROJECT_NAME}_sources src/main.cpp)
 aux_source_directory(src DIR_SRCS)
+aux_source_directory(src/http HTTP_SRCS)
 aux_source_directory(src/http/server HTTP_SERVER_SRCS)
 
-add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_sources} ${DIR_SRCS} ${HTTP_SERVER_SRCS})
+add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_sources} ${DIR_SRCS} ${HTTP_SERVER_SRCS} ${HTTP_SRCS})
 
 # NOTE: this will slow down compilation, but you'll have static code analysis :)
 if(CLANG_TIDY)

@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/root/cpp_server/src/http/data_handle.cpp" "/root/cpp_server/build/CMakeFiles/test_app.dir/src/http/data_handle.cpp.o"
   "/root/cpp_server/src/http/server/connection.cpp" "/root/cpp_server/build/CMakeFiles/test_app.dir/src/http/server/connection.cpp.o"
   "/root/cpp_server/src/http/server/io_context_pool.cpp" "/root/cpp_server/build/CMakeFiles/test_app.dir/src/http/server/io_context_pool.cpp.o"
   "/root/cpp_server/src/http/server/mime_types.cpp" "/root/cpp_server/build/CMakeFiles/test_app.dir/src/http/server/mime_types.cpp.o"
@@ -18,6 +19,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../inc"
+  "../inc/http"
   "../inc/http/server"
   )
 

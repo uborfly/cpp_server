@@ -123,6 +123,33 @@ test_app/fast:
 	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/build
 .PHONY : test_app/fast
 
+src/http/data_handle.o: src/http/data_handle.cpp.o
+
+.PHONY : src/http/data_handle.o
+
+# target to build an object file
+src/http/data_handle.cpp.o:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/data_handle.cpp.o
+.PHONY : src/http/data_handle.cpp.o
+
+src/http/data_handle.i: src/http/data_handle.cpp.i
+
+.PHONY : src/http/data_handle.i
+
+# target to preprocess a source file
+src/http/data_handle.cpp.i:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/data_handle.cpp.i
+.PHONY : src/http/data_handle.cpp.i
+
+src/http/data_handle.s: src/http/data_handle.cpp.s
+
+.PHONY : src/http/data_handle.s
+
+# target to generate assembly for a file
+src/http/data_handle.cpp.s:
+	$(MAKE) -f CMakeFiles/test_app.dir/build.make CMakeFiles/test_app.dir/src/http/data_handle.cpp.s
+.PHONY : src/http/data_handle.cpp.s
+
 src/http/server/connection.o: src/http/server/connection.cpp.o
 
 .PHONY : src/http/server/connection.o
@@ -348,6 +375,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test_app"
+	@echo "... src/http/data_handle.o"
+	@echo "... src/http/data_handle.i"
+	@echo "... src/http/data_handle.s"
 	@echo "... src/http/server/connection.o"
 	@echo "... src/http/server/connection.i"
 	@echo "... src/http/server/connection.s"

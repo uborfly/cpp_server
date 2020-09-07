@@ -16,7 +16,7 @@
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
 
         struct request;
@@ -30,6 +30,8 @@ namespace http
 
             /// Reset to initial parser state.
             void reset();
+
+            void parse_param(request &req, std::string &data_);
 
             /// Parse some data. The tribool return value is true when a complete request
             /// has been parsed, false if the data is invalid, indeterminate when more
@@ -91,7 +93,7 @@ namespace http
             } state_;
         };
 
-    } // namespace server2
+    } // namespace server
 } // namespace http
 
 #endif // HTTP_SERVER2_REQUEST_PARSER_HPP

@@ -23,7 +23,7 @@
 
 namespace http
 {
-    namespace server2
+    namespace server
     {
 
         /// Represents a single connection from a client.
@@ -67,11 +67,14 @@ namespace http
 
             /// The reply to be sent back to the client.
             reply reply_;
+
+            std::string data_;     //合并tcp数据包后的数据
+            bool is_header_parsed; //是否已经解析过header信息
         };
 
         typedef boost::shared_ptr<connection> connection_ptr;
 
-    } // namespace server2
+    } // namespace server
 } // namespace http
 
 #endif // HTTP_SERVER2_CONNECTION_HPP

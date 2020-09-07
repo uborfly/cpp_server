@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "../bin/test_app"
   "../bin/test_app.pdb"
+  "CMakeFiles/test_app.dir/src/http/data_handle.cpp.o"
   "CMakeFiles/test_app.dir/src/http/server/connection.cpp.o"
   "CMakeFiles/test_app.dir/src/http/server/io_context_pool.cpp.o"
   "CMakeFiles/test_app.dir/src/http/server/mime_types.cpp.o"
