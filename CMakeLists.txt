@@ -35,6 +35,9 @@ link_directories(/usr/local/lib)
 find_program( CLANG_TIDY NAMES clang-tidy)
 # NOTE: you can add search paths for example `PATHS /usr/local/opt/llvm/bin/`
 
+SET(CMAKE_C_COMPILER "gcc")
+SET(CMAKE_CXX_COMPILER "g++")
+
 message("\n--------------------------------\n")
 message("PROJECT NAME:\t\t${PROJECT_NAME}")
 message("PROJECT_BINARY_DIR:\t\t${PROJECT_BINARY_DIR}")

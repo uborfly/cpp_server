@@ -1,15 +1,16 @@
 #include "data_handle.hpp"
 #include "reply.hpp"
 #include <boost/lexical_cast.hpp>
+#include <iostream>
 
 namespace http
 {
     void data_process(std::string data, server::reply &rep)
     {
         //data_process
-
+        std::cout << data << std::endl;
         //data_reply
-        char buf[] = "ret";
+        char buf[] = "re";
 
         rep.content.append(buf, sizeof(buf));
     }

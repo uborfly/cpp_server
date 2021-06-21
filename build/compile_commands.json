@@ -1,47 +1,47 @@
 [
 {
-  "directory": "/root/cpp_server/build",
-  "command": "/usr/bin/c++   -I/root/cpp_server/inc -I/root/cpp_server/inc/http -I/root/cpp_server/inc/http/server  -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/main.cpp.o -c /root/cpp_server/src/main.cpp",
-  "file": "/root/cpp_server/src/main.cpp"
+  "directory": "/home/zkx/cpp_server/build",
+  "command": "g++   -I/usr/local/include -I/home/zkx/cpp_server/inc -I/home/zkx/cpp_server/inc/http -I/home/zkx/cpp_server/inc/http/server  -O2 -pipe -g -feliminate-unused-debug-types -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/work/x86_64-nativesdk-pokysdk-linux/meta-environment-imx6ull14x14evk/1.0-r8=/usr/src/debug/meta-environment-imx6ull14x14evk/1.0-r8 -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-linux= -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-nativesdk-pokysdk-linux= -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/main.cpp.o -c /home/zkx/cpp_server/src/main.cpp",
+  "file": "/home/zkx/cpp_server/src/main.cpp"
 },
 {
-  "directory": "/root/cpp_server/build",
-  "command": "/usr/bin/c++   -I/root/cpp_server/inc -I/root/cpp_server/inc/http -I/root/cpp_server/inc/http/server  -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/connection.cpp.o -c /root/cpp_server/src/http/server/connection.cpp",
-  "file": "/root/cpp_server/src/http/server/connection.cpp"
+  "directory": "/home/zkx/cpp_server/build",
+  "command": "g++   -I/usr/local/include -I/home/zkx/cpp_server/inc -I/home/zkx/cpp_server/inc/http -I/home/zkx/cpp_server/inc/http/server  -O2 -pipe -g -feliminate-unused-debug-types -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/work/x86_64-nativesdk-pokysdk-linux/meta-environment-imx6ull14x14evk/1.0-r8=/usr/src/debug/meta-environment-imx6ull14x14evk/1.0-r8 -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-linux= -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-nativesdk-pokysdk-linux= -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/connection.cpp.o -c /home/zkx/cpp_server/src/http/server/connection.cpp",
+  "file": "/home/zkx/cpp_server/src/http/server/connection.cpp"
 },
 {
-  "directory": "/root/cpp_server/build",
-  "command": "/usr/bin/c++   -I/root/cpp_server/inc -I/root/cpp_server/inc/http -I/root/cpp_server/inc/http/server  -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/io_context_pool.cpp.o -c /root/cpp_server/src/http/server/io_context_pool.cpp",
-  "file": "/root/cpp_server/src/http/server/io_context_pool.cpp"
+  "directory": "/home/zkx/cpp_server/build",
+  "command": "g++   -I/usr/local/include -I/home/zkx/cpp_server/inc -I/home/zkx/cpp_server/inc/http -I/home/zkx/cpp_server/inc/http/server  -O2 -pipe -g -feliminate-unused-debug-types -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/work/x86_64-nativesdk-pokysdk-linux/meta-environment-imx6ull14x14evk/1.0-r8=/usr/src/debug/meta-environment-imx6ull14x14evk/1.0-r8 -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-linux= -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-nativesdk-pokysdk-linux= -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/io_context_pool.cpp.o -c /home/zkx/cpp_server/src/http/server/io_context_pool.cpp",
+  "file": "/home/zkx/cpp_server/src/http/server/io_context_pool.cpp"
 },
 {
-  "directory": "/root/cpp_server/build",
-  "command": "/usr/bin/c++   -I/root/cpp_server/inc -I/root/cpp_server/inc/http -I/root/cpp_server/inc/http/server  -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/mime_types.cpp.o -c /root/cpp_server/src/http/server/mime_types.cpp",
-  "file": "/root/cpp_server/src/http/server/mime_types.cpp"
+  "directory": "/home/zkx/cpp_server/build",
+  "command": "g++   -I/usr/local/include -I/home/zkx/cpp_server/inc -I/home/zkx/cpp_server/inc/http -I/home/zkx/cpp_server/inc/http/server  -O2 -pipe -g -feliminate-unused-debug-types -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/work/x86_64-nativesdk-pokysdk-linux/meta-environment-imx6ull14x14evk/1.0-r8=/usr/src/debug/meta-environment-imx6ull14x14evk/1.0-r8 -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-linux= -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-nativesdk-pokysdk-linux= -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/mime_types.cpp.o -c /home/zkx/cpp_server/src/http/server/mime_types.cpp",
+  "file": "/home/zkx/cpp_server/src/http/server/mime_types.cpp"
 },
 {
-  "directory": "/root/cpp_server/build",
-  "command": "/usr/bin/c++   -I/root/cpp_server/inc -I/root/cpp_server/inc/http -I/root/cpp_server/inc/http/server  -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/reply.cpp.o -c /root/cpp_server/src/http/server/reply.cpp",
-  "file": "/root/cpp_server/src/http/server/reply.cpp"
+  "directory": "/home/zkx/cpp_server/build",
+  "command": "g++   -I/usr/local/include -I/home/zkx/cpp_server/inc -I/home/zkx/cpp_server/inc/http -I/home/zkx/cpp_server/inc/http/server  -O2 -pipe -g -feliminate-unused-debug-types -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/work/x86_64-nativesdk-pokysdk-linux/meta-environment-imx6ull14x14evk/1.0-r8=/usr/src/debug/meta-environment-imx6ull14x14evk/1.0-r8 -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-linux= -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-nativesdk-pokysdk-linux= -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/reply.cpp.o -c /home/zkx/cpp_server/src/http/server/reply.cpp",
+  "file": "/home/zkx/cpp_server/src/http/server/reply.cpp"
 },
 {
-  "directory": "/root/cpp_server/build",
-  "command": "/usr/bin/c++   -I/root/cpp_server/inc -I/root/cpp_server/inc/http -I/root/cpp_server/inc/http/server  -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/request_handler.cpp.o -c /root/cpp_server/src/http/server/request_handler.cpp",
-  "file": "/root/cpp_server/src/http/server/request_handler.cpp"
+  "directory": "/home/zkx/cpp_server/build",
+  "command": "g++   -I/usr/local/include -I/home/zkx/cpp_server/inc -I/home/zkx/cpp_server/inc/http -I/home/zkx/cpp_server/inc/http/server  -O2 -pipe -g -feliminate-unused-debug-types -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/work/x86_64-nativesdk-pokysdk-linux/meta-environment-imx6ull14x14evk/1.0-r8=/usr/src/debug/meta-environment-imx6ull14x14evk/1.0-r8 -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-linux= -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-nativesdk-pokysdk-linux= -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/request_handler.cpp.o -c /home/zkx/cpp_server/src/http/server/request_handler.cpp",
+  "file": "/home/zkx/cpp_server/src/http/server/request_handler.cpp"
 },
 {
-  "directory": "/root/cpp_server/build",
-  "command": "/usr/bin/c++   -I/root/cpp_server/inc -I/root/cpp_server/inc/http -I/root/cpp_server/inc/http/server  -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/request_parser.cpp.o -c /root/cpp_server/src/http/server/request_parser.cpp",
-  "file": "/root/cpp_server/src/http/server/request_parser.cpp"
+  "directory": "/home/zkx/cpp_server/build",
+  "command": "g++   -I/usr/local/include -I/home/zkx/cpp_server/inc -I/home/zkx/cpp_server/inc/http -I/home/zkx/cpp_server/inc/http/server  -O2 -pipe -g -feliminate-unused-debug-types -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/work/x86_64-nativesdk-pokysdk-linux/meta-environment-imx6ull14x14evk/1.0-r8=/usr/src/debug/meta-environment-imx6ull14x14evk/1.0-r8 -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-linux= -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-nativesdk-pokysdk-linux= -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/request_parser.cpp.o -c /home/zkx/cpp_server/src/http/server/request_parser.cpp",
+  "file": "/home/zkx/cpp_server/src/http/server/request_parser.cpp"
 },
 {
-  "directory": "/root/cpp_server/build",
-  "command": "/usr/bin/c++   -I/root/cpp_server/inc -I/root/cpp_server/inc/http -I/root/cpp_server/inc/http/server  -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/server.cpp.o -c /root/cpp_server/src/http/server/server.cpp",
-  "file": "/root/cpp_server/src/http/server/server.cpp"
+  "directory": "/home/zkx/cpp_server/build",
+  "command": "g++   -I/usr/local/include -I/home/zkx/cpp_server/inc -I/home/zkx/cpp_server/inc/http -I/home/zkx/cpp_server/inc/http/server  -O2 -pipe -g -feliminate-unused-debug-types -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/work/x86_64-nativesdk-pokysdk-linux/meta-environment-imx6ull14x14evk/1.0-r8=/usr/src/debug/meta-environment-imx6ull14x14evk/1.0-r8 -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-linux= -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-nativesdk-pokysdk-linux= -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/server/server.cpp.o -c /home/zkx/cpp_server/src/http/server/server.cpp",
+  "file": "/home/zkx/cpp_server/src/http/server/server.cpp"
 },
 {
-  "directory": "/root/cpp_server/build",
-  "command": "/usr/bin/c++   -I/root/cpp_server/inc -I/root/cpp_server/inc/http -I/root/cpp_server/inc/http/server  -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/data_handle.cpp.o -c /root/cpp_server/src/http/data_handle.cpp",
-  "file": "/root/cpp_server/src/http/data_handle.cpp"
+  "directory": "/home/zkx/cpp_server/build",
+  "command": "g++   -I/usr/local/include -I/home/zkx/cpp_server/inc -I/home/zkx/cpp_server/inc/http -I/home/zkx/cpp_server/inc/http/server  -O2 -pipe -g -feliminate-unused-debug-types -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/work/x86_64-nativesdk-pokysdk-linux/meta-environment-imx6ull14x14evk/1.0-r8=/usr/src/debug/meta-environment-imx6ull14x14evk/1.0-r8 -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-linux= -fdebug-prefix-map=/home/jiejie/yocto/fsl-release-bsp/build/tmp/sysroots/x86_64-nativesdk-pokysdk-linux= -g   -std=gnu++11 -o CMakeFiles/test_app.dir/src/http/data_handle.cpp.o -c /home/zkx/cpp_server/src/http/data_handle.cpp",
+  "file": "/home/zkx/cpp_server/src/http/data_handle.cpp"
 }
 ]
