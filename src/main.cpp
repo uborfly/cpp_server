@@ -20,6 +20,8 @@ int main(int argc, char *argv[])
     try
     {
         std::string ip_address = "0.0.0.0";
+        // std::string ip_address = "192.168.3.125";
+
         std::string port = "8081";
         std::string doc_root = "/root/cpp_server/docs";
         std::size_t num_threads = 3000;

@@ -385,6 +385,7 @@ namespace http
             //开始解析post参数
             if (boost::algorithm::iequals(req.method, "POST") && boost::algorithm::iequals(content_type, "multipart/form-data"))
             {
+                // std::cout << "post:" + data_ << std::endl;
                 const char *find_str = "\nContent-Disposition: form-data; name=\"";
                 int index = 0;
                 auto it = boost::algorithm::ifind_nth(data_, find_str, index);

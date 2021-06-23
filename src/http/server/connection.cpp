@@ -98,8 +98,10 @@ namespace http
 
                     //data_ = utf8_to_ascii(data_);//
 
-                    request_parser_.parse_param(request_, data_);      //新加的方法
-                    data_process(data_, reply_);                       //解析post表单
+                    request_parser_.parse_param(request_, data_); //新加的方法
+                    // data_process(data_, reply_);                       //解析post表单
+                    data_process(data_, reply_); //解析json
+
                     request_handler_.handle_request(request_, reply_); //数据返回
                     boost::asio::async_write(socket_, reply_.to_buffers(),
                                              boost::bind(&connection::handle_write, shared_from_this(),
